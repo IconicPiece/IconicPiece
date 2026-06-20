@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- AUTH GUARD — must run before anything renders -->
+  <script>
+    (function () {
+      if (sessionStorage.getItem('ip_auth') !== '1') {
+        // Not authenticated — redirect to gate immediately
+        window.location.replace('index.html');
+      }
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Iconic Piece</title>
+  <meta name="description" content="Iconic Piece — a study in simplicity. SS 2025 / Vol. 01" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SECTION 1: HERO -->
+  <section class="hero">
+    <canvas class="noise-canvas" data-noise></canvas>
+    <div class="hero-inner">
+      <h1 class="hero-title reveal-blur">ICONIC PIECE</h1>
+    </div>
+    <div class="hero-caption reveal-fade-late">
+      <p class="eyebrow eyebrow-light">A study in simplicity.</p>
+      <p class="eyebrow eyebrow-faint">SS 2025 / Vol. 01</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SHIRTS -->
+  <section class="split split-dark">
+    <div class="split-text">
+      <div class="fade-in">
+        <h2 class="split-heading">SHIRTS</h2>
+        <p class="split-sub split-sub-light">Form follows absence. Structure redefined through minimalism.</p>
+      </div>
+    </div>
+    <div class="split-media">
+      <img src="images/shirt.jpg" alt="Editorial Shirt" class="split-img shirt-img" data-parallax-hover />
+    </div>
+  </section>
+
+  <!-- SECTION 2B: JEANS -->
+  <section class="split split-light split-reverse">
+    <div class="split-text">
+      <div class="fade-in">
+        <h2 class="split-heading">JEANS</h2>
+        <p class="split-sub split-sub-dark">Raw material. Quiet permanence. Built to outlast the moment.</p>
+      </div>
+    </div>
+    <div class="split-media">
+      <img src="images/jeans.jpg" alt="Editorial Jeans" class="split-img" data-parallax-hover />
+    </div>
+  </section>
+
+  <!-- SECTION 3: LARGE PHOTOGRAPHY -->
+  <section class="big-photo">
+    <div class="big-photo-frame" data-parallax="0.15">
+      <img src="images/model1.jpg" alt="Editorial Fashion Model" class="big-photo-img" />
+    </div>
+    <div class="big-photo-overlay"></div>
+    <div class="big-photo-quote fade-in">
+      <p class="serif-quote">Silence becomes presence.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 4: EDITORIAL STATEMENT -->
+  <section class="statement">
+    <div class="statement-inner fade-in">
+      <div class="statement-row statement-row-left">
+        <h2 class="statement-word">I C O N I C</h2>
+      </div>
+      <div class="statement-row statement-row-right">
+        <h2 class="statement-word statement-word-ghost">— P I E C E —</h2>
+      </div>
+      <p class="statement-copy">We are not defining a look. We are defining a state of mind. An architecture of cloth designed for quiet confidence.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 5: GALLERY SEQUENCE -->
+  <section class="gallery">
+    <div class="gallery-inner">
+      <figure class="gallery-item gallery-item-1 fade-in">
+        <img src="images/gallery1.jpg" alt="Denim Minimal" />
+        <figcaption class="eyebrow eyebrow-faint">Fig 1. Structure</figcaption>
+      </figure>
+
+      <figure class="gallery-item gallery-item-2 fade-in" data-delay="0.2">
+        <img src="images/gallery2.jpg" alt="Streetwear Editorial" />
+        <figcaption class="eyebrow eyebrow-faint">Fig 2. Movement</figcaption>
+      </figure>
+
+      <figure class="gallery-item gallery-item-3 fade-in" data-delay="0.4">
+        <img src="images/gallery3.jpg" alt="Fashion Minimalism" />
+        <figcaption class="eyebrow eyebrow-faint">Fig 3. Rest</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SECTION 6: MANIFESTO -->
+  <section class="manifesto">
+    <div class="manifesto-inner">
+      <p class="manifesto-line manifesto-light fade-in">Less noise.</p>
+      <p class="manifesto-line manifesto-bold fade-in" data-delay="0.1">More meaning.</p>
+
+      <p class="manifesto-line manifesto-light manifesto-spaced fade-in" data-delay="0.2">Less urgency.</p>
+      <p class="manifesto-line manifesto-bold fade-in" data-delay="0.3">More presence.</p>
+
+      <p class="manifesto-line manifesto-light manifesto-spaced fade-in" data-delay="0.4">Less consumption.</p>
+      <p class="manifesto-line manifesto-bold fade-in" data-delay="0.5">More connection.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 7: FINAL IMAGE -->
+  <section class="final-photo">
+    <img src="images/final.jpg" alt="Final Portrait" class="final-photo-img scale-in" />
+    <div class="final-photo-overlay">
+      <canvas class="noise-canvas" data-noise></canvas>
+    </div>
+  </section>
+
+  <!-- SECTION 8: FOOTER -->
+  <footer class="site-footer">
+    <div class="fade-in footer-inner">
+      <h2 class="footer-title">Iconic Piece</h2>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/iconicpieceonline" class="footer-link">Instagram</a>
+        <span>·</span>
+        <a href="mailto:benni.nunez@icloud.com" class="footer-link">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
